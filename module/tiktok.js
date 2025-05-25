@@ -73,7 +73,7 @@ async function getTikTokMediaInfo(videoUrl) {
 
         // If no images, check for video
         const downloadUrl = videoData.video?.download_addr?.url_list?.[0] || 
-                          videoData.video?.download_no_watermark_addr?.url_list?.[0];
+                          videoData.video?.download_no_watermark_addr?.url_list?.[1];
 
         if (!downloadUrl) {
             throw new Error("Không tìm thấy link video không watermark!");
